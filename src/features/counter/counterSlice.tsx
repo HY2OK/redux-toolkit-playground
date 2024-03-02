@@ -10,7 +10,7 @@ const initialState: CounterState = {
   status: 'idle',
 }
 
-const fetchCount = (amount: number = 1): Promise<{ data: number }> => {
+const fetchCount = (amount: number = 1) => {
   return new Promise<{ data: number }>((resolve) =>
     setTimeout(() => resolve({ data: amount }), 1000),
   )
