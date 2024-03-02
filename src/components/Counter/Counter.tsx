@@ -2,6 +2,7 @@ import { ChangeEvent, useState } from 'react'
 import {
   decrement,
   increment,
+  incrementAsync,
   incrementByAmount,
 } from '../../features/counter/counterSlice'
 import { useAppDispatch, useAppSelector } from '../../hook'
@@ -23,6 +24,7 @@ const Counter = () => {
       <button onClick={() => dispatch(decrement())}>-</button>
       <input type="number" name="num" id="num" onChange={handleInput} value={amount} />
       <button onClick={() => dispatch(incrementByAmount(amount))}>add</button>
+      <button onClick={() => dispatch(incrementAsync(amount))}>async add</button>
     </div>
   )
 }
